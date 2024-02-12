@@ -1,0 +1,24 @@
+
+server:
+  port: 8080
+
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            clientId: replace
+            clientSecret: replace
+  cloud:
+    gateway:
+      routes:
+        - id: learn-oauth-resource
+          uri: http://localhost:9000
+          predicates:
+            - Path=/resource/**
+logging:
+  level:
+    org:
+      springframework:
+        security: TRACE
