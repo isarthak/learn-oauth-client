@@ -40,7 +40,7 @@ Step-6 : Create GlobalRequestFilter and extract jwt from Authentication object w
                 return chain.filter(exchange);
           }
 
-Step-7 : Add cloud gateway dependecies in yml file, it will redirect every call to resource app whose path starting with /resource
+Step-7 : Add cloud gateway dependecies in yml file, it will redirect every call to resource app (port 9000) whose path starting with /resource
   
           cloud:
             gateway:
